@@ -1,0 +1,59 @@
+.header{
+    width: 100%;   
+}
+.header ul{
+    height: 50px;
+    padding:3px;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header li{
+    display: inline-block;
+}
+@import url(
+    'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap'
+);
+.header li a{
+    padding: 0px 25px 0px 25px;
+    text-decoration: none;
+    font-size: 18px;
+    color: #1C4961;
+    font-weight: 500;
+    opacity: 0.75;
+    transition: all ease 0.1s;
+}
+.header li a:nth-child(1){
+    opacity: 1;
+}
+.header li a:hover{
+    opacity: 1;
+}
+
+.header div{
+ /* Logo div */
+    font-size: 16px;
+    font-weight: 600;
+    color: #4468E2;
+    align-items: center;
+    display: flex;
+}
+.logo-icon{
+    background-color: black;
+}
+.header ul button{
+    background-color: #4468E2;
+    height: 35px;
+    width: 105px;
+    border-radius: 17px;
+    text-decoration: none;
+    border: none;
+    color: white;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all ease 0.1s;
+}
+.header ul button:hover{
+   background-color: #537dd8;
+}
