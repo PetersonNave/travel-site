@@ -9,6 +9,8 @@ import covidIco from './src/icons/covidIco.svg';
 import card from './src/icons/card.svg';
 import person from './src/icons/person.svg';
 
+
+
 const Card = [
   {Icon: bestPrice,
    Title: "Get Best Prices",
@@ -32,13 +34,11 @@ function App() {
     <div className="App">
      <Header/>   
       <BannerHome/> 
-
       <div className='cards'>
         {Card.map((item, key)=>
         <div className='cardCont'>
           <CardComponent Description={item.Description} icon={item.Icon} title={item.Title} key={key}/>
           </div>
-
          )}
       </div>   
       <Recomended/>
