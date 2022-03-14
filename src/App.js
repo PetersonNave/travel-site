@@ -1,4 +1,5 @@
 import './App.css';
+import{ React} from 'react';
 import Header from './components/header';
 import BannerHome from './Screens/Home';
 import Recomended from './components/Recomended';
@@ -8,6 +9,7 @@ import bestPrice from './src/icons/bestPrice.svg';
 import covidIco from './src/icons/covidIco.svg';
 import card from './src/icons/card.svg';
 import person from './src/icons/person.svg';
+
 
 
 
@@ -30,6 +32,10 @@ const Card = [
   },
 ];
 function App() {
+
+  
+  
+  
   return (
     <div className="App">
      <Header/>   

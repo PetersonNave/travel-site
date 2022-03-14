@@ -1,4 +1,4 @@
-import {React, useState } from 'react';
+import {React, useState, useEffect } from 'react';
 import './style.css';
 
 import Singapore from '../../src/images/Singapore.png';
@@ -65,8 +65,17 @@ const Places = [
 
 export default()=>{
 
+  const [places, SetPlaces] = useState([{nome: "aaaaaaa"}, {nome: "bbbbb"}]);
 
+  useEffect(()=>{
+    fetch('http://192.170.208.105:3001/places') .then(response => response.json())
+    .then(placesResponse => {
+      SetPlaces(placesResponse);
+      console.log(places)
 
+    });
+    
+  },[]);
 
     const [blueLineMargin, setBlueLineMargin] = useState(-10)
     const [blueLineWidth, setBlueLineWidth] = useState(225)
@@ -91,11 +100,11 @@ export default()=>{
                 }} className='borderOfSelected'></div>
             </div>
 
-            <div className='PlaceArea'>
-                {Places.map((item, key) =>(
+            <div className='placeArea'>
+                {places.map((item, key) =>(
                    <div className='placeCont'>
-                       <img src={item.Image}/>
-                       <p className='placeName'>{item.Name}</p>
+                       <img className='placeImage' src={"images/" + item.ImageName}/>
+                       <p className='placeName'><strong>{item.Name}</strong></p>
                        <p className='placeDescription'>{item.Description}</p>
                        <div className='details'>
                             <div className='iconsAndDistance'>
@@ -104,11 +113,13 @@ export default()=>{
                                <img src={PlateIco}></img>   
                                <img src={FlightIco}></img>   
                             </div>
-                                <p className='placeDistance'>{item.Distance} Kms</p>
+                                {/* <p className='placeDistance'>{item.Distance} Kms</p> */}
+                                <p className='placeDistance'>1000 Kms</p>
                             </div>   
                             <div className='priceAndTripTime'>
                                 <p className='tripPrice'><strong>${item.Price}</strong></p>
-                                <p className='tripTime'><strong>Approx {item.Trip.Night} Night {item.Trip.Day} day trip</strong></p>
+                                <p className='tripTime'>Approx 2 Night 0 day trip</p>
+                                {/* <p className='tripTime'>Approx {item.Trip.Night} Night {item.Trip.Day} day trip</p> */}
                             </div>
                         </div>
                    </div>
