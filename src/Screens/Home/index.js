@@ -18,12 +18,12 @@ export default()=>{
                         <p className='optionSubtitle'>Search your Location</p>
                     </div>
                     <span className='grayLine'></span>
-                    <div>
+                    <div className='dateBox'>
                         <p><strong>Check-in</strong></p>
                         <p className='optionSubtitle'>Add Date</p>
                     </div>
                     <span className='grayLine'></span>
-                    <div>
+                    <div className='dateBox' >
                         <p><strong>Check-out</strong></p>
                         <p className='optionSubtitle'>Add Date</p>
                     </div>

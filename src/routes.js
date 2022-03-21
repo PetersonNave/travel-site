@@ -12,8 +12,6 @@ const connection = mysql.createPool({
     database: 'cadastro'
 });
 
-
-// Isso ainda é no routes.js! Logo abaixo dos outros códigos.
 // Iniciando o app.
 const app = express();
 
@@ -36,7 +34,5 @@ app.get('/places', function (req, res) {
 
 // Iniciando o servidor.
 app.listen(3001, () => {
- console.log('Vai no navegador e entra em http://localhost:3000/places pra ver os usuários cadastrados.');
+  console.log('Vai no navegador e entra em http://localhost:3000/places pra ver os usuários cadastrados.');
 });
-
-console.log("Pá")

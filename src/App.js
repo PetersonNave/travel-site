@@ -1,6 +1,7 @@
 import './App.css';
 import{ React} from 'react';
 import Header from './components/header';
+import Footer from './components/footer'
 import BannerHome from './Screens/Home';
 import Recomended from './components/Recomended';
 import CardComponent from './components/cards';
@@ -40,6 +41,7 @@ function App() {
     <div className="App">
      <Header/>   
       <BannerHome/> 
+      <div className='cardsArea'>
       <div className='cards'>
         {Card.map((item, key)=>
         <div className='cardCont'>
@@ -47,7 +49,9 @@ function App() {
           </div>
          )}
       </div>   
+      </div>
       <Recomended/>
+      <Footer/>
     </div>
   );
 }

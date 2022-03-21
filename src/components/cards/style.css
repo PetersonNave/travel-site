@@ -44,3 +44,23 @@
     padding-top: 5px;
     font-size: 20px;
 }
+@media screen and (max-width: 1050px){
+  .cardSection{
+    width: auto;
+    height: 300px;
+    box-shadow: 10px 40px 50px #E5E9F6;
+    border-radius: 15px;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+.cardSection img{
+  animation: scale 3s linear 0.2s infinite;
+}
+  .contents{
+    width: 324px;
+    height: 213px;
+}
+}

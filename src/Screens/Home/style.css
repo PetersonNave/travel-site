@@ -7,6 +7,7 @@
     border-radius: 18px;
     opacity: 1;
     color: white;
+   
     
 }
 .bannerSection{
@@ -70,4 +71,85 @@
 }
 .exploreBtn:hover{
     background-color: #537dd8;
+}
+
+@media screen and (max-width: 1050px){
+
+    .bannerSection h1{
+        font-size: 30px;
+        font-weight: 800;
+        margin-top: -50px; 
+    }
+    .bannerSubtitle{
+        width: auto;
+        padding: 0px 30px;
+        font-size: 18px;
+        text-align: center;
+        margin-top: 15px;
+    }
+    body{
+        padding: 0px 10px;
+    }
+
+
+    .bannerOptions{
+        align-items: center;
+        justify-content: space-between;
+        height: auto;
+        width: 60%;
+        background-color: #FFFFFF;
+       display: flex;
+       flex-direction: column;
+        margin-top: 30px;
+        border-radius: 10px;
+        padding: 30px 20px;
+        opacity: 0.8;
+        transition: all ease 0.1s;
+    }
+    .bannerOptions:hover{
+        opacity: 0.9;
+    }
+    .bannerOptions p{
+        font-size: 18px;
+        color: black;
+        margin: 0;
+      
+    }
+    .bannerOptions div{
+        display: inline-block;
+    }
+    .optionSubtitle{
+        font-size: 16px;
+        color: #7E7E7E;
+        opacity: 0.8;
+    }
+    .dateBox{
+        border: 1px solid #4468E2;
+        margin-top: 10px;
+        padding: 5px 50px;
+    }
+    .exploreBtn{
+        margin-top: 20px;
+        height: 63px;
+        width: 187px;
+        color: white;
+        background-color: #4468E2;
+        border-radius: 10px;
+        border: none;
+        font-size: 21px;
+        cursor: pointer;
+    }
+    .exploreBtn:hover{
+        background-color: #537dd8;
+    }
+    .bannerSectionArea{
+        height: 700px;
+       
+        background-size: 2000px;
+        width: 100%;
+        border-radius: 18px;
+        opacity: 1;
+        color: white;
+        
+    }
 }

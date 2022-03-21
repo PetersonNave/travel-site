@@ -1,71 +1,65 @@
 import {React, useState, useEffect } from 'react';
 import './style.css';
 
-import Singapore from '../../src/images/Singapore.png';
-import Thailand from '../../src/images/Thailand.png';
-import Paris from '../../src/images/Paris.png';
-import NewZealand from '../../src/images/NewZealand.png';
-import BoraBora from '../../src/images/BoraBora.png';
-import London from '../../src/images/London.png';
+
 
 import FlightIco from '../../src/icons/noun_Flight_-1.png';
 import HotelIco from '../../src/icons/noun_Hotel_-2.png';
 import PlateIco from '../../src/icons/noun_Plate_-1.png';
 
-const Places = [
-  {
-    Name: "Singapore",
-    Image: Singapore,
-    Description: "Singapore, officially the Republic of Singapore, is as",
-    Price: 38800,
-    Distance: 1000,
-    Trip: {Night: 2, Day: 0},
-  },
-  {
-    Name: "Thailand",
-    Image: Thailand,
-    Description: "Thailand is a Southeast Asian country. it's known for",
-    Price: 34200,
-    Distance: 2000,
-    Trip: {Night: 2, Day: 0},
-  },
-  {
-    Name: "Paris", 
-    Image: Paris,
-    Description: "Paris, France's capital, is a major European city and a",
-    Price: 40900,
-    Distance: 1500,
-    Trip: {Night: 2, Day: 0},
-  },
-  {
-    Name: "New Zealand",
-    Image: NewZealand,
-    Description: "New Zealand is an island country in the",
-    Price: 27000,
-    Distance: 3000,
-    Trip: {Night: 1, Day: 1},
-  },
-  {
-    Name: "Bora Bora",
-    Image: BoraBora,
-    Description: "Bora Bora is a small South Pacific island northwest of",
-    Price: 38800,
-    Distance: 1000,
-    Trip: {Night: 2, Day: 2},
-  },
-  {
-    Name: "London",
-    Image: London,
-    Description: "London, the capital of England and the United",
-    Price: 54000,
-    Distance: 2300,
-    Trip: {Night: 3, Day: 2},
-  },
-];
 
 export default()=>{
 
-  const [places, SetPlaces] = useState([{nome: "aaaaaaa"}, {nome: "bbbbb"}]);
+  const [places, SetPlaces] = useState( [
+    {
+      Name: "Singapore",
+      ImageName: 'Singapore.png',
+      Description: "Singapore, officially the Republic of Singapore, is as",
+      Price: 38800,
+      Distance: 1000,
+      Trip: {Night: 2, Day: 0},
+    },
+    {
+      Name: "Thailand",
+      ImageName: 'Thailand.png',
+      Description: "Thailand is a Southeast Asian country. it's known for",
+      Price: 34200,
+      Distance: 2000,
+      Trip: {Night: 2, Day: 0},
+    },
+    {
+      Name: "Paris", 
+      ImageName: 'Paris.png',
+      Description: "Paris, France's capital, is a major European city and a",
+      Price: 40900,
+      Distance: 1500,
+      Trip: {Night: 2, Day: 0},
+    },
+    {
+      Name: "New Zealand",
+      ImageName: 'NewZealand.png',
+      Description: "New Zealand is an island country in the",
+      Price: 27000,
+      Distance: 3000,
+      Trip: {Night: 1, Day: 1},
+    },
+    {
+      Name: "Bora Bora",
+      ImageName: 'BoraBora.png',
+      Description: "Bora Bora is a small South Pacific island northwest of",
+      Price: 38800,
+      Distance: 1000,
+      Trip: {Night: 2, Day: 2},
+    },
+    {
+      Name: "London",
+      ImageName: 'London.png',
+      Description: "London, the capital of England and the United",
+      Price: 54000,
+      Distance: 2300,
+      Trip: {Night: 3, Day: 2},
+    },
+  ]);
 
   useEffect(()=>{
     fetch('http://192.170.208.105:3001/places') .then(response => response.json())
@@ -117,7 +111,7 @@ export default()=>{
                                 <p className='placeDistance'>1000 Kms</p>
                             </div>   
                             <div className='priceAndTripTime'>
-                                <p className='tripPrice'><strong>${item.Price}</strong></p>
+                                <p className='tripPrice'><strong>${parseInt(item.Price).toLocaleString('en-US')}</strong></p>
                                 <p className='tripTime'>Approx 2 Night 0 day trip</p>
                                 {/* <p className='tripTime'>Approx {item.Trip.Night} Night {item.Trip.Day} day trip</p> */}
                             </div>
